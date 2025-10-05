@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KnowUrMovie — Movies, Reviews & Ratings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand" id="brand">KnowUrMovie </div>
+
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search movies, e.g. Inception">
+        <button id="searchBtn" class="btn small">Search</button>
+      </div>
+
+      <nav class="main-nav">
+        <button id="homeBtn" class="nav-btn">Home</button>
+        <button id="watchlistBtn" class="nav-btn">My Watchlist</button>
+      </nav>
+
+      <div class="auth-area">
+        <div id="welcome" class="muted"></div>
+        <input id="usernameInput" placeholder="Enter name" class="mini-input">
+        <button id="loginBtn" class="btn small">Login</button>
+        <button id="logoutBtn" class="btn small hidden">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="homeSection" class="page active">
+      <div class="container">
+        <h2 class="section-title">Trending Now</h2>
+        <div id="trendingMovies" class="row-container"></div>
+
+        <h2 class="section-title">Browse By Genre</h2>
+        <div id="genresContainer" class="genres-container">
+          <!-- genre sections injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- WATCHLIST -->
+    <section id="watchlistSection" class="page" style="display:none;">
+      <div class="container">
+        <h2 class="section-title">My Watchlist</h2>
+        <div id="watchlistMovies" class="row-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Movie Modal -->
+  <div id="movieModal" class="modal" aria-hidden="true">
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> KnowUrMovie</div>
+      <div class="muted">• TMDb data</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
